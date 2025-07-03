@@ -1,0 +1,14 @@
+[
+  {
+    "Title": "type-ioc",
+    "Description": "A TypeScript library for dependency injection and inversion of control.",
+    "Tech": ["TypeScript"],
+    "Link": "https://github.com/wormchenli/type-ioc"
+  },
+  {
+    "Title": "lichen",
+    "Description": "A modern, fast, and flexible web framework for building web applications.",
+    "Tech": ["TypeScript"],
+    "Link": "https://github.com/wormchenli/type-ioc"
+  }
+]
