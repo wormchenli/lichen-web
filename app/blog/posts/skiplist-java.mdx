@@ -1,0 +1,40 @@
+---
+title: "A simple skiplist based storage engine and experiment"
+publishedAt: "2024-04-08"
+summary: "Explore the enduring debate between using spaces and tabs for code indentation, and why this choice matters more than you might think."
+---
+
+## KV Storage Engine
+
+As is well known, LevelDB and RocksDB use a skip list as the core data structure for their storage engines.
+
+In Redis, skip lists are used to implement the Sorted Set data type.
+
+This project is a lightweight key–value storage engine based on a skip list, implemented in Java. It provides functionality for data insertion, data deletion, data querying, data display, persisting data to disk, and loading data from files.
+
+## Project Files
+
+- **SkipList.java**: Core implementation of the skip list
+- **StressTest.java**: Stress test for the skip list
+
+## Storage Engine Performance
+
+- Maximum skip list height: 32
+- Tests run in a single-threaded environment (multi-threaded tests actually take more time and resources due to locking during insert operations)
+- Machine configuration: macOS (14.3.1) on M1 chip with 16 GB RAM
+
+### Insert Performance
+
+- Data Size (10 records) , 129 ms, QPS: 775,194.
+
+- Data Size (50 records) , 935 ms, QPS: 534,759.
+
+- Data Size (100×10⁴ records) , 2,198 ms, QPS: 454,959.
+
+### Read Performance
+
+- Data Size (10 records) , 101 ms, QPS: 990,099.
+
+- Data Size (50 records) , 813 ms, QPS: 615,006.
+
+- Data Size (100×10⁴ records) , 2,130 ms, QPS: 469,484.
